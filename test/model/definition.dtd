@@ -1,0 +1,8 @@
+<!ELEMENT definition (primary_key|body|reasoning|products)* >
+  <!ATTLIST definition target_entity CDATA #REQUIRED>
+<!ELEMENT primary_key (#PCDATA)>
+  <!ATTLIST primary_key name CDATA #REQUIRED>
+<!ELEMENT body (#PCDATA)>
+<!ELEMENT reasoning (#PCDATA)>
+<!ELEMENT products (product*)>
+<!ENTITY % product SYSTEM "lib/dtds/product.dtd"> %product;
